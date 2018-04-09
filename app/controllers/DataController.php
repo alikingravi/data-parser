@@ -36,5 +36,7 @@ class DataController
                 echo $e->getMessage();
             }
         }
+
+        echo "The script is now complete\n";
     }
 }
