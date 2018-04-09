@@ -1,7 +1,13 @@
 <?php
 
+/**
+ * Class CsvDataRow
+ */
 class CsvDataRow
 {
+    /**
+     * Class variables
+     */
     private $id;
     private $appCode;
     private $deviceId;
@@ -32,6 +38,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for id
+     *
      * @return mixed
      */
     public function getId()
@@ -40,6 +48,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for appCode
+     *
      * @return mixed
      */
     public function getAppCode()
@@ -48,6 +58,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for deviceId
+     *
      * @return mixed
      */
     public function getDeviceId()
@@ -56,6 +68,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for contactable
+     *
      * @return mixed
      */
     public function getContactable()
@@ -64,6 +78,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for subscription status
+     *
      * @return mixed
      */
     public function getSubscriptionStatus()
@@ -72,6 +88,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for free product status
+     *
      * @return mixed
      */
     public function getHasDownloadedFreeProductStatus()
@@ -80,6 +98,8 @@ class CsvDataRow
     }
 
     /**
+     * Getter for iap product status
+     *
      * @return mixed
      */
     public function getHasDownloadedIapProductStatus()
@@ -87,6 +107,11 @@ class CsvDataRow
         return $this->hasDownloadedIapProductStatus;
     }
 
+    /**
+     * Returns an entire row as string
+     *
+     * @return string
+     */
     public function toCsv()
     {
         $csvRow = $this->id . "," . $this->appCode . "," . $this->deviceId . "," . $this->contactable . "," . $this->subscriptionStatus . "," . $this->hasDownloadedFreeProductStatus . "," . $this->hasDownloadedIapProductStatus . "\n";

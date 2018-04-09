@@ -5,24 +5,13 @@
  */
 class FilePathFinderTest extends \PHPUnit\Framework\TestCase
 {
-
-    /**
-     * Stores the instance of FilePathFinder Class
-     * @var
-     */
     private $filePathFinder;
 
-    /**
-     * Setup function
-     */
     public function setup()
     {
         $this->filePathFinder = new FilePathFinder();
     }
 
-    /**
-     *  Tests whether file paths are returned from a given directory
-     */
     public function testFilePathsAreReturnedFromGivenDirectory()
     {
         $directory = __DIR__ . "/resources/filePathFinder/";
@@ -39,7 +28,6 @@ class FilePathFinderTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     *  If a directory does not exist then no files should be returned
      *  @expectedException InvalidDirectoryException
      */
     public function testNoFileReturnedWhenDirectoryDoesNotExist()

@@ -1,12 +1,20 @@
 <?php
 
+/**
+ * Class File
+ */
 class File
 {
+
+    /**
+     * Class variables
+     */
     private $filePath;
     private $rawDataRows;
 
     /**
-     * File constructor.
+     * File constructor
+     *
      * @param $filePath
      * @param $rawDataRows
      */
@@ -17,6 +25,8 @@ class File
     }
 
     /**
+     * Getter for file path
+     *
      * @return mixed
      */
     public function getFilePath()
@@ -25,6 +35,8 @@ class File
     }
 
     /**
+     * Getter for raw data rows
+     *
      * @return mixed
      */
     public function getRawDataRows()

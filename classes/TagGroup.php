@@ -1,7 +1,13 @@
 <?php
 
+/**
+ * Class TagGroup
+ */
 class TagGroup
 {
+    /**
+     * Group Categories
+     */
     const tagGroups = [
         'subscription_status' => [
             'active_subscriber',
@@ -21,12 +27,17 @@ class TagGroup
         ]
     ];
 
+    /**
+     * Receives a piped string e.g "hello|world" and extracts the valid tags in each category
+     * If 2 tags are found in the same group then it replaces the value with an empty string
+     *
+     * @param $tags
+     * @return array
+     */
     public static function extractValidTags($tags)
     {
         $tagArray = explode('|', $tags);
-
         $validTags = [];
-
         $groupFound = [
             'subscription_status' => false,
             'has_downloaded_free_product_status' => false,

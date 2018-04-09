@@ -1,18 +1,22 @@
 <?php
 
+/**
+ * Class FileParser
+ */
 class FileParser
 {
-    // Open the file
-    // Loop over every line
-    // Create rawDataRow object of every line
-    // Create new file object
-
-
-
+    /**
+     * Opens and loops over a file, copies ever line and stores it to the file object
+     *
+     * @param $filePath
+     * @return File
+     * @throws EmptyFileException
+     * @throws FileNotFoundException
+     */
     public function parseFile($filePath)
     {
-        // Open the file
         if (file_exists($filePath)) {
+            // Open the file
             $handle = fopen($filePath, "r");
             $counter = 0;
             $rawDataRows = [];

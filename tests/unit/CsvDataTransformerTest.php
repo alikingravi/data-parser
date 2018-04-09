@@ -23,7 +23,6 @@ class CsvDataTransformerTest extends \PHPUnit\Framework\TestCase
         $appCodesFilePath = __DIR__ . "/resources/appCode/appCodes.ini";
 
         $csvDataTransformer = new CsvDataTransformer(new AppCodes($appCodesFilePath));
-
         $csvFile = $csvDataTransformer->transform($file);
 
         $this->assertEquals(2, count($csvFile->getCsvDataRows()));

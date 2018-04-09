@@ -1,7 +1,13 @@
 <?php
 
+/**
+ * Class CsvFile
+ */
 class CsvFile
 {
+    /**
+     * Class variables
+     */
     private $csvDataRows;
     private $filePath;
 
@@ -17,6 +23,8 @@ class CsvFile
     }
 
     /**
+     * Getter for file path
+     *
      * @return mixed
      */
     public function getFilePath()
@@ -25,6 +33,8 @@ class CsvFile
     }
 
     /**
+     * Getter for csv data rows
+     *
      * @return mixed
      */
     public function getCsvDataRows()

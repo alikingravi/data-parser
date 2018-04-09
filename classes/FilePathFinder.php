@@ -1,14 +1,18 @@
 <?php
 
 /**
- * Receives path to a directory an
+ * Class FilePathFinder
  */
 class FilePathFinder {
 
+    /**
+     * Class variables
+     */
     private $files;
 
     /**
      * Receives path to a directory and returns all the file paths in it
+     * 
      * @param $directory
      * @return
      * @throws InvalidDirectoryException
@@ -16,8 +20,8 @@ class FilePathFinder {
     public function findFiles($directory) {
 
         try {
-            $di = new DirectoryIterator($directory);
-            foreach ($di as $file) {
+            $dir = new DirectoryIterator($directory);
+            foreach ($dir as $file) {
 
                 if ($file->isDir() && !$file->isLink() && !$file->isDot()) {
                     // recurse into directories other than a few special ones

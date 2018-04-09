@@ -1,14 +1,31 @@
 <?php
 
+/**
+ * Class CsvDataTransformer
+ */
 class CsvDataTransformer
 {
+    /**
+     * Class variables
+     */
     private $appCodes;
 
+    /**
+     * CsvDataTransformer constructor.
+     * @param AppCodes $appCodes
+     */
     public function __construct(AppCodes $appCodes)
     {
         $this->appCodes = $appCodes;
     }
 
+    /**
+     * Takes a file object and returns a csv file object
+     *
+     * @param $file
+     * @return CsvFile
+     * @throws AppCodeNotFoundException
+     */
     public function transform($file)
     {
         $count = 1;

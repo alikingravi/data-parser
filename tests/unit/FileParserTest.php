@@ -12,7 +12,6 @@ class FileParserTest extends \PHPUnit\Framework\TestCase
     public function testRawDataIsExtractedFromAValidFile()
     {
         $filePath = __DIR__ . "/resources/fileParser/test-file-1.log";
-
         $file = $this->fileParser->parseFile($filePath);
 
         $this->assertInstanceOf(File::class, $file);

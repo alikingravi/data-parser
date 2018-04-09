@@ -1,7 +1,13 @@
 <?php
 
+/**
+ * Class RawDataRow
+ */
 class RawDataRow
 {
+    /**
+     * Class variables
+     */
     private $appCode;
     private $deviceToken;
     private $deviceTokenStatus;
@@ -23,6 +29,8 @@ class RawDataRow
     }
 
     /**
+     * Getter for app code
+     *
      * @return mixed
      */
     public function getAppCode()
@@ -31,6 +39,8 @@ class RawDataRow
     }
 
     /**
+     * Getter for device token
+     *
      * @return mixed
      */
     public function getDeviceToken()
@@ -39,6 +49,8 @@ class RawDataRow
     }
 
     /**
+     * Getter for token status
+     *
      * @return mixed
      */
     public function getDeviceTokenStatus()
@@ -47,6 +59,8 @@ class RawDataRow
     }
 
     /**
+     * Getter for tags
+     *
      * @return mixed
      */
     public function getTags()

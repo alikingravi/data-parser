@@ -1,7 +1,14 @@
 <?php
 
+/**
+ * Class AppCodes
+ */
 class AppCodes
 {
+
+    /**
+     * @var array|bool
+     */
     private $ini_array;
 
     /**
@@ -12,6 +19,13 @@ class AppCodes
         $this->ini_array = parse_ini_file($appCodesFilePath);
     }
 
+    /**
+     * Returns an app code key from a given string value
+     *
+     * @param $value
+     * @return false|int|string
+     * @throws AppCodeNotFoundException
+     */
     public function getCode($value)
     {
         $key = array_search($value, $this->ini_array);

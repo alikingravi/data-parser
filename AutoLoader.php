@@ -1,16 +1,23 @@
 <?php
 
+/**
+ * Class AutoLoader
+ */
 class AutoLoader {
- 
- static private $classNames = array();
 
- /**
-  * Store the filename and full path of all ".php" files found
-  */
- public static function registerDirectory($dirName) {
+    /**
+     * Class variables
+     */
+    static private $classNames = array();
 
-     $di = new DirectoryIterator($dirName);
-     foreach ($di as $file) {
+    /**
+     * Finds classes
+     * @param $dirName
+     */
+    public static function registerDirectory($dirName) {
+
+     $dir = new DirectoryIterator($dirName);
+     foreach ($dir as $file) {
 
          if ($file->isDir() && !$file->isLink() && !$file->isDot()) {
              // recurse into directories other than a few special ones
@@ -23,11 +30,20 @@ class AutoLoader {
      }
  }
 
- public static function registerClass($className, $fileName) {
+    /**
+     * Registers class
+     * @param $className
+     * @param $fileName
+     */
+    public static function registerClass($className, $fileName) {
      AutoLoader::$classNames[$className] = $fileName;
  }
 
- public static function loadClass($className) {
+    /**
+     * Loads class
+     * @param $className
+     */
+    public static function loadClass($className) {
      if (isset(AutoLoader::$classNames[$className])) {
          require_once(AutoLoader::$classNames[$className]);
      }
