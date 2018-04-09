@@ -1,0 +1,3 @@
+app,deviceToken,deviceTokenStatus,tags
+New Appcode,token1,1,active_is
+Another Appcode,token2,0,active_not
