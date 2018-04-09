@@ -29,7 +29,7 @@ class CsvDataTransformerTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals('classic-rock-prog', $csvFile->getCsvDataRows()[0]->getAppCode());
         $this->assertEquals('token1', $csvFile->getCsvDataRows()[0]->getDeviceId());
-        $this->assertEquals(true, $csvFile->getCsvDataRows()[0]->getContactable());
+        $this->assertEquals('true', $csvFile->getCsvDataRows()[0]->getContactable());
         $this->assertEquals('active_subscriber', $csvFile->getCsvDataRows()[0]->getSubscriptionStatus());
         $this->assertEquals('', $csvFile->getCsvDataRows()[0]->getHasDownloadedFreeProductStatus());
         $this->assertEquals('', $csvFile->getCsvDataRows()[0]->getHasDownloadedIapProductStatus());
@@ -37,7 +37,7 @@ class CsvDataTransformerTest extends \PHPUnit\Framework\TestCase
 
         $this->assertEquals('gathered-by-mollie-makes', $csvFile->getCsvDataRows()[1]->getAppCode());
         $this->assertEquals('token2', $csvFile->getCsvDataRows()[1]->getDeviceId());
-        $this->assertEquals(false, $csvFile->getCsvDataRows()[1]->getContactable());
+        $this->assertEquals('false', $csvFile->getCsvDataRows()[1]->getContactable());
         $this->assertEquals('active_subscriber', $csvFile->getCsvDataRows()[1]->getSubscriptionStatus());
         $this->assertEquals('downloaded_free_product_unknown', $csvFile->getCsvDataRows()[1]->getHasDownloadedFreeProductStatus());
         $this->assertEquals('', $csvFile->getCsvDataRows()[1]->getHasDownloadedIapProductStatus());
